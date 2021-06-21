@@ -1,5 +1,5 @@
-const parse = require('pg-connection-string').parse
-const dbUrl = parse(process.env.DATABASE_URL)
+const parse = require('pg-connection-string').parse;
+const dbUrl = parse(process.env.DATABASE_URL || '');
 
 module.exports = ({ env }) => ({
   defaultConnection: 'default',
@@ -11,11 +11,13 @@ module.exports = ({ env }) => ({
         host: env('DATABASE_HOST', dbUrl.host),
         port: env.int('DATABASE_PORT', dbUrl.port),
         database: env('DATABASE_NAME', dbUrl.database),
-        username: env('DATABASE_USERNAME', dbUrl.username),
+        username: env('DATABASE_USERNAME', dbUrl.user),
         password: env('DATABASE_PASSWORD', dbUrl.password),
-        ssl: env.bool('DATABASE_SSL', dbUrl.ssl),
+        ...(env('DATABASE_SSL', dbUrl.ssl) === 'true' ? { ssl: { rejectUnauthorized: false } } : null),
       },
-      options: {}
+      options: {
+        ssl: env('DATABASE_SSL', dbUrl.ssl) === 'true',
+      }
     },
   },
 });
