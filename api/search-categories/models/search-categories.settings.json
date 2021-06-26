@@ -17,7 +17,7 @@
       "required": true
     },
     "searchTerm": {
-      "type": "string",
+      "type": "text",
       "required": true
     },
     "description": {
