@@ -10,7 +10,7 @@ Install node modules using yarn
 yarn
 ```
 
-Copy the exmaple env file example to a file named `.env`
+Copy the exmaple env file example to a file named `.env`. Ask your tech lead for the AWS Keys.
 
 ```sh
 cp .env.example .env
