@@ -197,6 +197,16 @@
               "type": "string"
             },
             "deprecated": false
+          },
+          {
+            "name": "startAt_lte",
+            "in": "query",
+            "required": false,
+            "description": "Get events that start at a date before or equal a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
           }
         ]
       }
