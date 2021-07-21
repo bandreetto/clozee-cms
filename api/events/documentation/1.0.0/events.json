@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/eventos": {
+    "/events": {
       "get": {
         "deprecated": false,
-        "description": "Find all the eventos's records",
+        "description": "Find all the events's records",
         "responses": {
           "200": {
-            "description": "Retrieve eventos document(s)",
+            "description": "Retrieve events document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Eventos"
+                    "$ref": "#/components/schemas/Events"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Eventos"
+          "Events"
         ],
         "parameters": [
           {
@@ -194,14 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new eventos record",
+        "description": "Create a new events record",
         "responses": {
           "200": {
-            "description": "Retrieve eventos document(s)",
+            "description": "Retrieve events document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Eventos"
+                  "$ref": "#/components/schemas/Events"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Eventos"
+          "Events"
         ],
         "requestBody": {
           "description": "",
@@ -247,20 +247,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewEventos"
+                "$ref": "#/components/schemas/NewEvents"
               }
             }
           }
         }
       }
     },
-    "/eventos/count": {
+    "/events/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of eventos documents",
+        "description": "Retrieve the numver of events documents",
         "responses": {
           "200": {
-            "description": "Retrieve eventos document(s)",
+            "description": "Retrieve events document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -306,22 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Eventos"
+          "Events"
         ],
         "parameters": []
       }
     },
-    "/eventos/{id}": {
+    "/events/{id}": {
       "get": {
         "deprecated": false,
-        "description": "Find one eventos record",
+        "description": "Find one events record",
         "responses": {
           "200": {
-            "description": "Retrieve eventos document(s)",
+            "description": "Retrieve events document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Eventos"
+                  "$ref": "#/components/schemas/Events"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Eventos"
+          "Events"
         ],
         "parameters": [
           {
@@ -376,14 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single eventos record",
+        "description": "Update a single events record",
         "responses": {
           "200": {
-            "description": "Retrieve eventos document(s)",
+            "description": "Retrieve events document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Eventos"
+                  "$ref": "#/components/schemas/Events"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Eventos"
+          "Events"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewEventos"
+                "$ref": "#/components/schemas/NewEvents"
               }
             }
           }
@@ -449,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single eventos record",
+        "description": "Delete a single events record",
         "responses": {
           "200": {
-            "description": "deletes a single eventos based on the ID supplied",
+            "description": "deletes a single events based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Eventos"
+          "Events"
         ],
         "parameters": [
           {
@@ -514,11 +514,10 @@
   },
   "components": {
     "schemas": {
-      "Eventos": {
+      "Events": {
         "required": [
           "id",
           "title",
-          "banner",
           "startAt",
           "endAt"
         ],
@@ -627,7 +626,7 @@
           }
         }
       },
-      "NewEventos": {
+      "NewEvents": {
         "required": [
           "title",
           "startAt",
@@ -678,7 +677,7 @@
   },
   "tags": [
     {
-      "name": "Eventos"
+      "name": "Events"
     }
   ]
 }
