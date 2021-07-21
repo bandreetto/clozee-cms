@@ -10,16 +10,16 @@ Install node modules using yarn
 yarn
 ```
 
-Copy the exmaple env file example to a file named `.env`. Ask your tech lead for the AWS Keys.
+Copy the sample env file example to a file named `.env`. Ask your tech lead for the AWS Keys.
 
 ```sh
-cp .env.example .env
+cp .sample.env .env
 ```
 
-If you are not connecting to a remote server, setup you local postgres database. You can create one using docker:
+If you are not connecting to a remote server, setup you local postgres database. You can create one using the docker-compose file present in the project root:
 
 ```sh
-docker run -p 5432:5432 -e POSTGRES_PASSWORD=password postgres
+docker-compose -p clozee-cms -f docker-compose.yml up -d
 ```
 
 Create the `clozee` database on the postgres:
@@ -39,7 +39,7 @@ postgres=#
 Build and run strapi with a watcher for development:
 
 ```sh
-yarn develop
+yarn dev
 ```
 
 Create a strapi build:

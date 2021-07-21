@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_clozee_api_posts",
+  "info": {
+    "name": "Post",
+    "icon": "image",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "postId": {
+      "type": "string"
+    }
+  }
+}
