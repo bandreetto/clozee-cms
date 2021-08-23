@@ -257,7 +257,7 @@
     "/events/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of events documents",
+        "description": "Retrieve the number of events documents",
         "responses": {
           "200": {
             "description": "Retrieve events document(s)",
