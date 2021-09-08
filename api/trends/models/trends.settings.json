@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "trends",
   "info": {
-    "name": "Trends"
+    "name": "Trends",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -16,6 +17,10 @@
     },
     "description": {
       "type": "richtext"
+    },
+    "trendOwnerId": {
+      "type": "string",
+      "default": "clozee-trends-user"
     }
   }
 }

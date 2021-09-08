@@ -528,6 +528,10 @@
           "description": {
             "type": "string"
           },
+          "trendOwnerId": {
+            "type": "string",
+            "default": "clozee-trends-user"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -541,6 +545,10 @@
           },
           "description": {
             "type": "string"
+          },
+          "trendOwnerId": {
+            "type": "string",
+            "default": "clozee-trends-user"
           },
           "published_at": {
             "type": "string",
